@@ -9,7 +9,7 @@ import javax.persistence.Id;
 @Entity
 @AllArgsConstructor
 @RequiredArgsConstructor
-@NoArgsConstructor
+//@NoArgsConstructor
 public class Ingredient {
   @Id
   private String id;

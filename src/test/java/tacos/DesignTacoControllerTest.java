@@ -67,8 +67,7 @@ public class DesignTacoControllerTest {
     design = new Taco();
     design.setName("Test Taco");
 
-    design.setIngredients(
-        Arrays.asList(new IngredientRef("FLTO"), new IngredientRef("GRBF"), new IngredientRef("CHED")));
+
 
   }
 
