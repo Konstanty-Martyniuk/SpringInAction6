@@ -4,11 +4,29 @@ spring:
     generate-unique-name: false
     name: tacocloud
 #end::setDatabaseName[]
-  security:
-    oauth2:
-      client:
-        registration:
-          facebook:
-            clientId: <facebook client id>
-            clientSecret: <facebook client secret>
-            scope: email, public_profile
+security:
+   oauth2:
+     client:
+       registration:
+         facebook:
+           clientId: <facebook client id>
+           clientSecret: <facebook client secret>
+           scope: email, public_profile
+server:
+  port: 8443
+  ssl:
+    key-store: file:///path/to/mykeys.jks
+    key-store-password: letmein
+    key-password: letmein
+
+logging:
+  file:
+    path: /var/logs/
+    file: TAcoCloud.log
+  level:
+    root: WARN
+    org.springframework.security: DEBUG
+
+taco:
+  orders:
+    pageSize: 10
